@@ -1,5 +1,6 @@
 from keras.preprocessing import image
 from tqdm import tqdm
+import keras.utils as image
 
 import numpy as np
 

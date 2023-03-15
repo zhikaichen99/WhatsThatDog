@@ -1,5 +1,5 @@
 from keras.applications import ResNet50
-from keras.applications.resnet50 import preprocess_input, decode_predictions
+from tensorflow.keras.applications.resnet50 import preprocess_input, decode_predictions
 from utils.preprocess import path_to_tensor, paths_to_tensor
 import numpy as np
 

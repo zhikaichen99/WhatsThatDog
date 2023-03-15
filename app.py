@@ -8,12 +8,14 @@ from utils.preprocess import path_to_tensor
 
 from keras.models import load_model
 
+from PIL import Image
+
 with open('dogbreeds.txt', 'r') as f:
     dog_names = f.readlines()
 
 dog_names = [x.strip() for x in dog_names]
 
-model = load_model('/saved_models/weights.best.VGG19.hdf5')
+model = load_model('saved_models/weights.best.VGG19.hdf5')
 
 
 def VGG19_predict_breed(image):
@@ -39,5 +41,10 @@ if __name__ == "__main__":
     file = st.file_uploader("Upload an image")
     
     if file is not None:
-        prediction = predict_dog_breed(file)
+
+        img = Image.open(file)
+        img = img.save('img.jpg')
+        file_path = 'img.jpg'
+
+        prediction = predict_dog_breed(file_path)
         st.write(prediction)
