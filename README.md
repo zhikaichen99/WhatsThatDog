@@ -46,7 +46,8 @@ To run this project, the following libraries and packages must be installed:
 
 1. Clone the repository to your local machine using the following command:
 ```
-git clone https://github.com/zhikaichen99/DisasterResponse.git
+git clone https://github.com/zhikaichen99/WhatsThatDog.git
+```
 
 2. Run the `app.py` script to start the streamlit application by running the following command:
 ```
